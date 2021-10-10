@@ -88,23 +88,16 @@ public class Main {
         for (int i = 1; i < array.length; i++) {
             int sum_left = 0;
             int sum_right = 0;
-            //String left = "";
-            //String right = "";
             for(int j = 0; j < i; j++){
                 sum_left += array[j];
-                //left += array[j] + " ";
             }
             for(int j = array.length - 1; j >= i; j--) {
                 sum_right += array[j];
-                //right += array[j] + " ";
             }
-            //System.out.println("we've compared " + left + "with " + right + " sl:" + sum_left + " sr:" + sum_right);
             if (sum_left == sum_right) {
-                //System.out.println("true");
                 return true;
             }
         }
-        //System.out.println("false");
         return false;
     }
 }
